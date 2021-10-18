@@ -1,0 +1,23 @@
+{
+  "name": "notify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "firebase serve",
+  "dependencies": {
+    "firebase": "^9.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "firebase serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amankrokx/notefy.git.git"
+  },
+  "author": "amankrokx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amankrokx/notefy.git/issues"
+  },
+  "homepage": "https://github.com/amankrokx/notefy.git#readme"
+}
