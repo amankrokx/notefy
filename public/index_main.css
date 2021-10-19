@@ -1,6 +1,6 @@
 :root {
 --ab: #039be5;
---ao: #ffa100;
+--ao: #ff4747;
 --bg: #ECEFF1;
 --bgb: #f1f3f4;
 --bgh: #e8eaed;
@@ -83,7 +83,7 @@ vertical-align: middle;
 header {position: fixed;z-index: 4;}
 header div.top {top: 0; left: 0;background: white; width: 100vw; height: 48px; }
 header div div {height: 36px; padding: 6px 16px; font-size: 18px;}
-header div.bottom {top: 48px; left: 0; background: var(--ab); width: 100vw; height: 48px; padding: 0 24px; box-shadow: var(--shadow);}
+header div.bottom {top: 48px; left: 0; background: var(--ab); width: 100vw; height: 48px; box-shadow: var(--shadow);}
 
 div.quotes {
 padding: 0 24px 32px 12px;
@@ -141,7 +141,7 @@ header div.top div.search:hover input {
     top: calc(50vh - 256px);
     transform: rotate(-25deg);
     filter: drop-shadow(4px 8px 6px rgba(0,0,0,0.3)) opacity(0.5);
-    z-index: 1;
+    z-index: -1;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -226,15 +226,13 @@ div.top div.login:hover {
     position: fixed;
     top: calc(168px + ((100vh - 778px)/2));
     right: calc(280px + ((100vh - 778px)/2));
-    transform: rotate(-25deg);
+    transform: rotate(-25deg) scale(1.2);
     filter: drop-shadow(4px 8px 6px rgba(0,0,0,0.3)) opacity(0.5);
     z-index: 1;
 }
 
 div.container, section.ads {
-    position: absolute;
-    top: 128px;
-    left: 32px;
+    margin: 32px;
     width: calc(100vw - 376px);
     height: 120px;
     max-width: calc(100vw - 376px);
@@ -244,10 +242,14 @@ div.container, section.ads {
     box-shadow: var(--shadow);
 }
 
+.adsense-mobile {
+    max-height: 120px !important;
+}
+
 section.ads_b {
     position: absolute;
-    bottom: 32px;
     left: 32px;
+    bottom: 32px;
     width: calc(100vw - 376px);
     height: 120px;
     max-width: calc(100vw - 376px);
@@ -257,10 +259,51 @@ section.ads_b {
     box-shadow: var(--shadow);
 }
 
-div.bottom div span {
+div.bottom div.right span {
     margin-left: 15px;
     font-size: 0.86em;
     color: var(--ptc);
+}
+
+select {
+    background: rgba(0,0,0,0);
+    color: var(--ttc);
+    margin-left: 15px;
+    height: 24px;
+    width: 80px;
+    border: 0;
+    box-shadow: var(--tbshadow);
+    border-radius: 2px;
+    padding: 0 0 0 10px;
+    outline: none;
+    transition: var(--trans);
+}
+
+select:hover {
+    background: #e8f0fe;
+    color: var(--stc)
+}
+
+div.notes div.ribbon span {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+div.notes div.modules span.material-icons {
+    font-size: 4em;
+    color: var(--ao);
+}
+
+div.notes div.modules span.title {
+    color: var(--stc);
+}
+
+div.notes div.module {
+    display: inline-block;
+    width: 84px;
+    height: 84px;
+    text-align: center;
+    margin: 26px;
 }
 
 #main {
