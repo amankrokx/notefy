@@ -267,7 +267,7 @@ div.bottom div.right span {
 
 select {
     background: rgba(0,0,0,0);
-    color: var(--ttc);
+    color: var(--bg);
     margin-left: 15px;
     height: 24px;
     width: 80px;
